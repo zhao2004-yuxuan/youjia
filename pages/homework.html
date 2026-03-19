@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日作业 - 优佳辅导班</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 30px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .back-btn {
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 30px 20px;
+        }
+
+        .homework-item {
+            background: linear-gradient(135deg, #e0f7ff 0%, #cff0ff 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid #00f2fe;
+            transition: all 0.3s ease;
+        }
+
+        .homework-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(79, 172, 254, 0.2);
+        }
+
+        .homework-item.completed {
+            opacity: 0.7;
+            border-left-color: #4facfe;
+        }
+
+        .homework-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .homework-day {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .day-icon {
+            font-size: 20px;
+        }
+
+        .status-badge {
+            background: #00f2fe;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-badge.completed {
+            background: #4facfe;
+        }
+
+        .homework-content {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .task-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .task-item {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: #333;
+        }
+
+        .task-item::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00f2fe;
+            font-weight: bold;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            border-top: 1px solid #eee;
+        }
+
+        .tip {
+            background: #e0f7ff;
+            border-left: 4px solid #00f2fe;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #0066cc;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="back-btn" onclick="goBack()">←</span>
+            <div class="header-title">每日作业</div>
+        </div>
+
+        <div class="content">
+            <div class="homework-item">
+                <div class="homework-header">
+                    <div class="homework-day">
+                        <span class="day-icon">📅</span>
+                        周一
+                    </div>
+                    <span class="status-badge">进行中</span>
+                </div>
+                <div class="homework-content">
+                    <ul class="task-list">
+                        <li class="task-item">语文：完成课文预习笔记</li>
+                        <li class="task-item">数学：练习题第1-20题</li>
+                        <li class="task-item">英语：背诵单词表（A-M）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="homework-item">
+                <div class="homework-header">
+                    <div class="homework-day">
+                        <span class="day-icon">📅</span>
+                        周二
+                    </div>
+                    <span class="status-badge">进行中</span>
+                </div>
+                <div class="homework-content">
+                    <ul class="task-list">
+                        <li class="task-item">语文：完成课堂练习卷</li>
+                        <li class="task-item">数学：练习题第21-40题</li>
+                        <li class="task-item">英语：背诵单词表（N-Z）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="homework-item">
+                <div class="homework-header">
+                    <div class="homework-day">
+                        <span class="day-icon">📅</span>
+                        周三
+                    </div>
+                    <span class="status-badge">进行中</span>
+                </div>
+                <div class="homework-content">
+                    <ul class="task-list">
+                        <li class="task-item">语文：作文一篇（不少于800字）</li>
+                        <li class="task-item">数学：综合练习题第1-15题</li>
+                        <li class="task-item">英语：完成听力练习</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="homework-item">
+                <div class="homework-header">
+                    <div class="homework-day">
+                        <span class="day-icon">📅</span>
+                        周四
+                    </div>
+                    <span class="status-badge">进行中</span>
+                </div>
+                <div class="homework-content">
+                    <ul class="task-list">
+                        <li class="task-item">语文：阅读理解训练5篇</li>
+                        <li class="task-item">数学：综合练习题第16-30题</li>
+                        <li class="task-item">英语：完成口语对话练习</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="homework-item">
+                <div class="homework-header">
+                    <div class="homework-day">
+                        <span class="day-icon">📅</span>
+                        周五
+                    </div>
+                    <span class="status-badge">进行中</span>
+                </div>
+                <div class="homework-content">
+                    <ul class="task-list">
+                        <li class="task-item">语文：周测试卷</li>
+                        <li class="task-item">数学：周测试卷</li>
+                        <li class="task-item">英语：周测试卷</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tip">
+                💡 提示：所有作业需在规定时间内完成，班主任会定期检查并反馈。
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>坚持每日学习 | 进步看得见</p>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

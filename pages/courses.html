@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程安排 - 优佳辅导班</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 30px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .back-btn {
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 30px 20px;
+        }
+
+        .course-item {
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe0e6 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid #f5576c;
+            transition: all 0.3s ease;
+        }
+
+        .course-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.2);
+        }
+
+        .course-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .course-icon {
+            font-size: 20px;
+        }
+
+        .course-detail {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 6px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #f5576c;
+            min-width: 70px;
+        }
+
+        .detail-value {
+            color: #333;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #f5576c;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="back-btn" onclick="goBack()">←</span>
+            <div class="header-title">课程安排</div>
+        </div>
+
+        <div class="content">
+            <div class="course-item">
+                <div class="course-name">
+                    <span class="course-icon">📖</span>
+                    语文强化班
+                </div>
+                <div class="course-detail">
+                    <div class="detail-row">
+                        <span class="detail-label">年级：</span>
+                        <span class="detail-value">初中/高中</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">人数：</span>
+                        <span class="detail-value">8-12人/班</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">内容：</span>
+                        <span class="detail-value">阅读理解、作文写作、古文赏析</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">小班教学</span>
+                    <span class="tag">名师授课</span>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <div class="course-name">
+                    <span class="course-icon">🔢</span>
+                    数学精品班
+                </div>
+                <div class="course-detail">
+                    <div class="detail-row">
+                        <span class="detail-label">年级：</span>
+                        <span class="detail-value">初中/高中</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">人数：</span>
+                        <span class="detail-value">8-12人/班</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">内容：</span>
+                        <span class="detail-value">函数、几何、代数重点突破</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">小班教学</span>
+                    <span class="tag">名师授课</span>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <div class="course-name">
+                    <span class="course-icon">🧪</span>
+                    英语提升班
+                </div>
+                <div class="course-detail">
+                    <div class="detail-row">
+                        <span class="detail-label">年级：</span>
+                        <span class="detail-value">初中/高中</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">人数：</span>
+                        <span class="detail-value">8-12人/班</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">内容：</span>
+                        <span class="detail-value">语法、听力、口语、写作全面提升</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">小班教学</span>
+                    <span class="tag">名师授课</span>
+                </div>
+            </div>
+
+            <div class="course-item">
+                <div class="course-name">
+                    <span class="course-icon">⚗️</span>
+                    理化综合班
+                </div>
+                <div class="course-detail">
+                    <div class="detail-row">
+                        <span class="detail-label">年级：</span>
+                        <span class="detail-value">初中/高中</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">人数：</span>
+                        <span class="detail-value">8-12人/班</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">内容：</span>
+                        <span class="detail-value">物理、化学实验与理论相结合</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">小班教学</span>
+                    <span class="tag">名师授课</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>每班配备专业教师 | 提供完整教材</p>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

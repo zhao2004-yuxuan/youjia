@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>师资介绍 - 优佳辅导班</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            padding: 30px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .back-btn {
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .header-title {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 30px 20px;
+        }
+
+        .teacher-card {
+            background: linear-gradient(135deg, #e8f9f5 0%, #d4f5f0 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 2px solid #38f9d7;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(67, 233, 123, 0.2);
+        }
+
+        .teacher-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .teacher-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .teacher-info {
+            flex: 1;
+        }
+
+        .teacher-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+        }
+
+        .teacher-subject {
+            font-size: 13px;
+            color: #38f9d7;
+            font-weight: 600;
+        }
+
+        .teacher-detail {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .detail-item {
+            margin-bottom: 8px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #38f9d7;
+            min-width: 60px;
+        }
+
+        .detail-value {
+            color: #333;
+        }
+
+        .achievements {
+            background: rgba(56, 249, 215, 0.1);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 12px;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.5;
+        }
+
+        .achievement-icon {
+            color: #38f9d7;
+            margin-right: 4px;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            border-top: 1px solid #eee;
+        }
+
+        .team-intro {
+            background: #e8f9f5;
+            border-left: 4px solid #38f9d7;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="back-btn" onclick="goBack()">←</span>
+            <div class="header-title">师资介绍</div>
+        </div>
+
+        <div class="content">
+            <div class="team-intro">
+                🌟 优佳辅导班拥有一支经验丰富、教学成果显著的师资队伍，所有教师均具有多年教学经验和丰富的考试辅导经验。
+            </div>
+
+            <div class="teacher-card">
+                <div class="teacher-header">
+                    <div class="teacher-avatar">📚</div>
+                    <div class="teacher-info">
+                        <div class="teacher-name">李老师</div>
+                        <div class="teacher-subject">语文主讲</div>
+                    </div>
+                </div>
+                <div class="teacher-detail">
+                    <div class="detail-item">
+                        <span class="detail-label">学历：</span>
+                        <span class="detail-value">硕士学位</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">经验：</span>
+                        <span class="detail-value">12年教学经验</span>
+                    </div>
+                    <div class="achievements">
+                        <span class="achievement-icon">✓</span>高考语文平均提分30分
+                        <br>
+                        <span class="achievement-icon">✓</span>擅长作文写作和阅读理解
+                        <br>
+                        <span class="achievement-icon">✓</span>学生满意度98%
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <div class="teacher-header">
+                    <div class="teacher-avatar">🔢</div>
+                    <div class="teacher-info">
+                        <div class="teacher-name">王老师</div>
+                        <div class="teacher-subject">数学主讲</div>
+                    </div>
+                </div>
+                <div class="teacher-detail">
+                    <div class="detail-item">
+                        <span class="detail-label">学历：</span>
+                        <span class="detail-value">硕士学位</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">经验：</span>
+                        <span class="detail-value">10年教学经验</span>
+                    </div>
+                    <div class="achievements">
+                        <span class="achievement-icon">✓</span>高考数学平均提分35分
+                        <br>
+                        <span class="achievement-icon">✓</span>擅长函数和几何问题
+                        <br>
+                        <span class="achievement-icon">✓</span>学生满意度99%
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <div class="teacher-header">
+                    <div class="teacher-avatar">🌍</div>
+                    <div class="teacher-info">
+                        <div class="teacher-name">张老师</div>
+                        <div class="teacher-subject">英语主讲</div>
+                    </div>
+                </div>
+                <div class="teacher-detail">
+                    <div class="detail-item">
+                        <span class="detail-label">学历：</span>
+                        <span class="detail-value">硕士学位</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">经验：</span>
+                        <span class="detail-value">11年教学经验</span>
+                    </div>
+                    <div class="achievements">
+                        <span class="achievement-icon">✓</span>高考英语平均提分28分
+                        <br>
+                        <span class="achievement-icon">✓</span>擅长语法和口语训练
+                        <br>
+                        <span class="achievement-icon">✓</span>学生满意度97%
+                    </div>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <div class="teacher-header">
+                    <div class="teacher-avatar">⚗️</div>
+                    <div class="teacher-info">
+                        <div class="teacher-name">陈老师</div>
+                        <div class="teacher-subject">理化主讲</div>
+                    </div>
+                </div>
+                <div class="teacher-detail">
+                    <div class="detail-item">
+                        <span class="detail-label">学历：</span>
+                        <span class="detail-value">硕士学位</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">经验：</span>
+                        <span class="detail-value">9年教学经验</span>
+                    </div>
+                    <div class="achievements">
+                        <span class="achievement-icon">✓</span>高考理综平均提分40分
+                        <br>
+                        <span class="achievement-icon">✓</span>擅长实验和难题突破
+                        <br>
+                        <span class="achievement-icon">✓</span>学生满意度98%
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>专业教学 · 用心服务 · 成就梦想</p>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>
